@@ -28,7 +28,7 @@ Start Ganache with a custom configuration:ganache --networkId 1337 --gasLimit 20
 MetaMask: A browser extension for interacting with the Ethereum blockchain. Install from metamask.io.
 
  ## Installation
--Clone the Repository:
+Clone the Repository:
 git clone https://github.com/yourusername/auction-dapp.git
 cd auction-dapp
  ## Install Dependencies:
@@ -38,8 +38,8 @@ For the frontend (React app):cd ../frontend
 npm install
 
 ## Configure MetaMask:
--Connect MetaMask to the Ganache network (Localhost 8545).
--Import Ganache accounts (use the private keys provided by Ganache).
+Connect MetaMask to the Ganache network (Localhost 8545).
+Import Ganache accounts (use the private keys provided by Ganache).
 ## Compile and Migrate Contracts:
 In the contracts directory, compile and deploy the contracts:truffle compile
 truffle migrate --network development --reset
