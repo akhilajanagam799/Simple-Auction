@@ -117,7 +117,7 @@ Check console logs for contract deployment or transaction errors.
 
 **Auction Contract**:
 
-`**Constructor**`: Initializes the auction with a creator, item name, starting bid, and duration. Validates inputs to prevent invalid setups.
+**Constructor**: Initializes the auction with a creator, item name, starting bid, and duration. Validates inputs to prevent invalid setups.
 
 **placeBid()**: Allows users to bid, refunding the previous bidder if applicable. Uses a minimum increment (0.1 ETH) to ensure competitive bidding. Protected by nonReentrant to prevent reentrancy attacks.
 
@@ -152,13 +152,13 @@ Transfers use `.call` for gas safety
 
 **fetchAuctionData()**: Polls the blockchain every 5 seconds to update the auction list, ensuring real-time data with retry logic for reliability.
 
-**handleResolveDispute()**: Calls the resolveDispute function on the contract. Currently lacks creator validation, causing reverts when called by the bidder (e.g., transaction from 0xc18c6e3a01efae45e8e838a22b0503850e731a29 with status: false and gasUsed: 37249). This should be fixed by adding a check against auctionCreator.
+**handleResolveDispute()**: Calls the `resolveDispute` function on the contract. Currently lacks creator validation, causing reverts when called by the bidder (e.g., transaction from 0xc18c6e3a01efae45e8e838a22b0503850e731a29 with status: false and gasUsed: 37249). This should be fixed by adding a check against auctionCreator.
 
-**Design Choice**: The React app uses Web3.js for blockchain interaction and local storage for offline data. Event listeners (e.g., AuctionCreated, NewHighestBid) provide real-time updates, while notifications enhance user experience. The current dispute resolution flow assumes UI restriction, which needs alignment with the contract's onlyCreator modifier.
+**Design Choice**: The React app uses Web3.js for blockchain interaction and local storage for offline data. Event listeners (e.g., `AuctionCreated`, `NewHighestBid`) provide real-time updates, while notifications enhance user experience. The current dispute resolution flow assumes UI restriction, which needs alignment with the contract's `onlyCreator` modifier.
 
 ## Key Design Choices
 
-**Security**: ReentrancyGuard and gas-aware transfers mitigate common vulnerabilities. However, the lack of a withdrawal mechanism for stuck funds is a potential risk.
+**Security**: `ReentrancyGuard` and gas-aware transfers mitigate common vulnerabilities. However, the lack of a withdrawal mechanism for stuck funds is a potential risk.
 
 **User Experience**: Real-time updates via events and a 1-second timer for auction countdowns improve interactivity, though polling could be optimized with WebSocket subscriptions.
 
