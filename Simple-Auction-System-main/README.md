@@ -68,7 +68,7 @@ Smart Contracts
 -resolveDispute: Only the creator can resolve disputes, choosing to award funds to themselves or refund the bidder. The onlyCreator modifier ensures only the seller decides, reflecting a centralized dispute resolution design to simplify logic, though it could be enhanced with arbitration in the future.
 -Design Choice: The use of ReentrancyGuard and gas-aware .call for transfers prioritizes security. The ItemStatus enum and events (e.g., FundsReleased, DisputeInitiated) enable transparent state tracking.
 
-#3AuctionFactory Contract:
+## A uctionFactory Contract:
 -createAuction: Deploys new Auction instances and stores their addresses. Open to all users, promoting accessibility.
 -getAllAuctions: Returns all auction addresses for frontend retrieval, supporting a dynamic auction list.
 -Design Choice: A simple factory pattern was chosen for ease of deployment and management. Future enhancements could include ownership restrictions or auction categorization.
@@ -87,10 +87,10 @@ Smart Contracts
 -Dispute Resolution: Centralized to the creator for simplicity, but this could be a limitation. A decentralized arbitration system could be explored for fairness.
 -Scalability: The bidHistory array in the Auction contract may grow large, increasing gas costs. An off-chain solution or history pruning could be considered.
 
--Future Improvements
+## Future Improvements
 
-Add creator validation in handleResolveDispute to match the onlyCreator modifier.
-Implement a withdrawal function for stuck funds in the Auction contract.
-Enhance the AuctionFactory with filtering or pausing capabilities.
-Optimize gas usage by limiting bidHistory or moving it off-chain.
+-Add creator validation in handleResolveDispute to match the onlyCreator modifier.
+-Implement a withdrawal function for stuck funds in the Auction contract.
+-Enhance the AuctionFactory with filtering or pausing capabilities.
+-Optimize gas usage by limiting bidHistory or moving it off-chain.
 
