@@ -5,15 +5,20 @@ This repository contains a decentralized auction platform built using Solidity s
 💡 This project was developed by Team Hashers as part of a collaborative academic project.
 ## Team Members:
 Janagam Akhila - 230041012
+
 Komma Pranitha - 230001040
+
 Vanka Abhinaya Sri - 230003082
+
 Alam Chathura - 230004004
+
 Soha Shaik Sultana-230001071
+
 Reena Meena - 230003057
 
  ## Setup Instructions:
 
-### Prerequisites
+### Prerequisites :
 **Node.js**: Ensure Node.js (v14 or later) is installed. [Download from nodejs.org](https://nodejs.org)
 
 **Truffle Suite**: A development framework for Ethereum. Install globally via 
@@ -22,21 +27,22 @@ Reena Meena - 230003057
 **Ganache**: A personal blockchain for Ethereum development. Install via Ganache GUI or 
   `npm install -g ganache-cli`
   
-Start Ganache with a custom configuration
+Start Ganache with a custom configuration :
 
 `ganache --networkId 1337 --gasLimit 20000000 --defaultBalanceEther 1000 --port 8545 --chain.hardfork london --blockTime 2 --db ./ganache-data`
 
 
 **MetaMask**: A browser extension for interacting with the Ethereum blockchain. Install from metamask.io.
 
-Installation
+##  Installation
 
 Clone the Repository:
-git clone https://github.com/yourusername/auction-dapp.git
-cd auction-dapp
+`git clone https://github.com/yourusername/auction-dapp.git
+
+cd auction-dapp`
 
 
-Install Dependencies:
+ ## Install Dependencies:
 
 For the smart contracts (Truffle project):cd contracts
 npm install
