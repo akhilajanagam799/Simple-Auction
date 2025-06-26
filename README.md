@@ -2,8 +2,11 @@
 
 🛒 Simple Auction System
 This repository contains a decentralized auction platform built using Solidity smart contracts and a React frontend. The application allows users to create auctions, place bids, confirm receipt, initiate disputes, and resolve them on the Ethereum blockchain.
+
 💡 This project was developed by Team Hashers as part of a collaborative academic project.
+
 ## Team Members:
+
 Janagam Akhila - 230041012
 
 Komma Pranitha - 230001040
@@ -19,6 +22,7 @@ Reena Meena - 230003057
  ## Setup Instructions:
 
 ### Prerequisites :
+
 **Node.js**: Ensure Node.js (v14 or later) is installed. [Download from nodejs.org](https://nodejs.org)
 
 **Truffle Suite**: A development framework for Ethereum. Install globally via 
@@ -38,6 +42,7 @@ Start Ganache with a custom configuration :
 ##  Installation
 
 Clone the Repository:
+
 `git clone https://github.com/yourusername/auction-dapp.git`
 
 `cd auction-dapp`
@@ -46,6 +51,7 @@ Clone the Repository:
  ## Install Dependencies:
 
 For the smart contracts (Truffle project):
+
 `cd contracts`
 
 `npm install`
@@ -54,6 +60,7 @@ For the smart contracts (Truffle project):
 For the frontend (React app):
 
 `cd ../frontend`
+
 `npm install`
 
 
@@ -69,13 +76,16 @@ Import Ganache accounts (use the private keys provided by Ganache).
 ## Compile and Migrate Contracts:
 
 In the contracts directory, compile and deploy the contracts:
+
 `truffle compile`
+
 `truffle migrate --network development --reset`
 
 
 **Copy the generated ABIs to the frontend**:
 
 `cp build/contracts/AuctionFactory.json ../frontend/src/contracts/AuctionFactory.json`
+
 `cp build/contracts/Auction.json ../frontend/src/contracts/Auction.json`
 
 
@@ -107,7 +117,7 @@ Check console logs for contract deployment or transaction errors.
 
 **Auction Contract**:
 
-**Constructor**: Initializes the auction with a creator, item name, starting bid, and duration. Validates inputs to prevent invalid setups.
+`**Constructor**`: Initializes the auction with a creator, item name, starting bid, and duration. Validates inputs to prevent invalid setups.
 
 **placeBid()**: Allows users to bid, refunding the previous bidder if applicable. Uses a minimum increment (0.1 ETH) to ensure competitive bidding. Protected by nonReentrant to prevent reentrancy attacks.
 
