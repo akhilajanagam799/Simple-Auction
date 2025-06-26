@@ -18,8 +18,15 @@ Reena Meena - 230003057
 
 **Truffle Suite**: A development framework for Ethereum. Install globally via 
 `npm install -g truffle`
-**Ganache**: A personal blockchain for Ethereum development. Install via Ganache GUI or CLI:npm install -g ganache-cli
-Start Ganache with a custom configuration:ganache --networkId 1337 --gasLimit 20000000 --defaultBalanceEther 1000 --port 8545 --chain.hardfork london --blockTime 2 --db ./ganache-data
+
+**Ganache**: A personal blockchain for Ethereum development. Install via Ganache GUI or 
+  `npm install -g ganache-cli`
+  
+Start Ganache with a custom configuration
+
+```bash
+ganache --networkId 1337 --gasLimit 20000000 --defaultBalanceEther 1000 --port 8545 --chain.hardfork london --blockTime 2 --db ./ganache-data
+
 
 **MetaMask**: A browser extension for interacting with the Ethereum blockchain. Install from metamask.io.
 
