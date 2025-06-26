@@ -24,8 +24,7 @@ Reena Meena - 230003057
   
 Start Ganache with a custom configuration
 
-```bash
-ganache --networkId 1337 --gasLimit 20000000 --defaultBalanceEther 1000 --port 8545 --chain.hardfork london --blockTime 2 --db ./ganache-data
+`ganache --networkId 1337 --gasLimit 20000000 --defaultBalanceEther 1000 --port 8545 --chain.hardfork london --blockTime 2 --db ./ganache-data`
 
 
 **MetaMask**: A browser extension for interacting with the Ethereum blockchain. Install from metamask.io.
