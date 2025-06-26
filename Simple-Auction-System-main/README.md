@@ -91,12 +91,9 @@ Smart Contracts
 
 Add creator validation in handleResolveDispute to match the onlyCreator modifier.
 
-
 Implement a withdrawal function for stuck funds in the Auction contract.
 
-
 Enhance the AuctionFactory with filtering or pausing capabilities.
-
 
 Optimize gas usage by limiting bidHistory or moving it off-chain.
 
