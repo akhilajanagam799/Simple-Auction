@@ -29,13 +29,13 @@ MetaMask: A browser extension for interacting with the Ethereum blockchain. Inst
 
  ## Installation
 Clone the Repository:
-git clone https://github.com/yourusername/auction-dapp.git
+git clone https://github.com/akhilajanagam799/auction-dapp.git
 cd auction-dapp
  ## Install Dependencies:
  For the smart contracts (Truffle project):cd contracts
  npm install
-For the frontend (React app):cd ../frontend
-npm install
+ For the frontend (React app):cd ../frontend
+ npm install
 
 ## Configure MetaMask:
 Connect MetaMask to the Ganache network (Localhost 8545).
@@ -60,7 +60,7 @@ Smart Contracts
 
 ## Auction Contract:
 
--Constructor: Initializes the auction with a creator, item name, starting bid, and duration. Validates inputs to prevent invalid setups.
+**Constructor**: Initializes the auction with a creator, item name, starting bid, and duration. Validates inputs to prevent invalid setups.
 -placeBid: Allows users to bid, refunding the previous bidder if applicable. Uses a minimum increment (0.1 ETH) to ensure competitive bidding. Protected by nonReentrant to prevent reentrancy attacks.
 -endAuction: Only the creator can end the auction after the deadline, setting a 7-day confirmation period. This ensures the seller has control over the auction's conclusion.
 -confirmReceipt: The highest bidder confirms item receipt, transferring funds to the seller. Restricted to the bidder and requires the auction to be ended.
@@ -68,7 +68,7 @@ Smart Contracts
 -resolveDispute: Only the creator can resolve disputes, choosing to award funds to themselves or refund the bidder. The onlyCreator modifier ensures only the seller decides, reflecting a centralized dispute resolution design to simplify logic, though it could be enhanced with arbitration in the future.
 -Design Choice: The use of ReentrancyGuard and gas-aware .call for transfers prioritizes security. The ItemStatus enum and events (e.g., FundsReleased, DisputeInitiated) enable transparent state tracking.
 
-## A uctionFactory Contract:
+## AuctionFactory Contract:
 -createAuction: Deploys new Auction instances and stores their addresses. Open to all users, promoting accessibility.
 -getAllAuctions: Returns all auction addresses for frontend retrieval, supporting a dynamic auction list.
 -Design Choice: A simple factory pattern was chosen for ease of deployment and management. Future enhancements could include ownership restrictions or auction categorization.
